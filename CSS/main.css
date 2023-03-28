@@ -6,10 +6,18 @@ a {
     text-decoration: none;
 }
 
-button,
-input {
+button {
     outline: none;
     border: none;
+}
+
+input {
+    background: rgba(17, 0, 62, 0.553);
+    width: 200px;
+    height: 40px;
+    border: 2px solid rgb(181, 181, 181);
+    border-radius: 5px;
+
 }
 
 
@@ -24,18 +32,39 @@ input {
 header {
     /* background: tomato; */
     font-size: 25px;
-    position: fixed;
+    position: relative;
     top: 20px;
     width: 100%;
     z-index: 9999;
 }
 
+header .inner-header h1 {
+    flex: 3;
+}
+
+header .inner-header h2 {
+    flex: 55;
+}
+
+header .inner-header h3 {
+    flex: 5;
+}
+
+
 header .inner-header {
+
     display: flex;
     justify-content: space-between;
     margin: 15px;
 }
 
+header .inner-header h1 a img {
+    width: 50px;
+}
+
+header .inner-header h1 a img:hover {
+    opacity: 0.8;
+}
 
 header .inner-header h1,
 header .inner-header h2 ul {
@@ -68,6 +97,10 @@ header .inner-header ul li a:hover {
     margin-left: 30px;
 }
 
+.sub-header ul li a:nth-child(1) {
+    font-weight: 700;
+}
+
 .sub-header ul li a:hover {
     color: rgb(67, 67, 185);
 }
@@ -80,3 +113,234 @@ header .inner-header ul li a:hover {
     text-decoration: underline;
 }
 
+section {
+    /* background: tomato; */
+    width: 80%;
+    margin: 0 10%;
+    
+}
+
+section .page1 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+section .page1 ul li {
+    margin: 20px 0;
+}
+
+section .page1 ul li:nth-child(1) {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+section .page1 ul li:nth-child(2) {
+    color: rgba(255, 255, 255, 0.422);
+}
+
+section .page1 ul li a {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.603);
+    border-radius: 5px;
+}
+
+section .page1 ul li a:nth-child(1) {
+    color: rgb(10, 0, 38);
+    background: white;
+}
+
+section .page1 ul li a:nth-child(1):hover {
+    box-shadow: 5px 8px 0 rgba(255, 255, 255, 0.204);
+}
+
+section .page1 ul li a:nth-child(2):hover {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+section .page2 {
+    height: 800px;
+}
+
+section .page2 ul li img {
+    width: 80%;
+    margin-left: 10%;
+}
+
+section .page2 ul li:nth-child(2) {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2.5s ease-in;
+    position: relative;
+}
+
+section .page2 ul li:nth-child(1) {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s ease-out;
+    box-sizing: border-box;
+    width: 80%;
+    position: absolute;
+}
+
+section .page2:hover ul li:nth-child(1) {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+section .page2:hover ul li:nth-child(2) {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+section .page3 ul {
+    height: 400px;
+    position: relative;
+}
+
+section .page3 ul li:nth-child(1) {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 2s;
+    width: 47%;
+    float: left;
+    margin-right: 6%;
+}
+
+section .page3 ul li img {
+    width: 47%;
+    float: right;
+}
+
+section .page3 ul li div {
+    margin-bottom: 20px;
+}
+
+section .page3 ul li div.the {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+section .page3 ul li div.use {
+    color: rgba(255, 255, 255, 0.537);
+    font-size: 20px;
+}
+
+section .page3 ul li div img {
+    width: 19%;
+    margin-right: 3%;
+}
+
+section .page3 ul li div img:nth-child(1) {
+    margin-right: 12%;
+}
+
+section .page3:hover ul li:nth-child(1) {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .page4 ul {
+    height: 700px;
+    position: relative;
+}
+
+section .page4 ul li:nth-child(1) {
+    margin-top: 10%;
+    width: 47%;
+    float: left;
+    margin-right: 6%;
+}
+
+section .page4 ul li div {
+    margin-bottom: 40px;
+}
+
+section .page4 ul li img {
+    width: 47%;
+    float: right;
+}
+
+section .page4 ul li div.fas {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+section .page4 ul li div.ghs {
+    color: rgba(255, 255, 255, 0.537);
+    font-size: 20px;
+}
+
+section .page4 ul li div img {
+    width: 19%;
+    margin-right: 3%;
+}
+
+section .page4 ul li {
+    position: relative;
+}
+
+section .page4 ul li >div {
+    display: flex;
+}
+
+section .page4 ul li .fas,
+section .page4 ul li .ghs {
+    transform: translateX(100px);
+    transition: 2s;
+    opacity: 0;
+}
+
+section .page4 ul li .cpus .cp, 
+section .page4 ul li .cpus .mem, 
+section .page4 ul li .cpus .spin {
+    width: 40%;
+    margin-right: 3%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+section .page4 ul li .cpus div h1 {
+    color: rgba(255, 255, 255, 0.537);
+    font-size: 8px;
+}
+
+section .page4:hover ul li .fas,
+section .page4:hover ul li .ghs {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .page4 ul li .cpus .cp {
+    transform: translateX(-100px);
+    transition: 2s;
+    opacity: 0;
+}
+
+section .page4 ul li .cpus .mem {
+    transform: translateX(-100px);
+    transition: 3s;
+    opacity: 0;
+}
+
+section .page4 ul li .cpus .spin {
+    transform: translateX(-100px);
+    transition: 4s;
+    opacity: 0;
+}
+
+section .page4:hover ul li .cpus .cp {
+    transform: translateX(0);
+    opacity: 1;
+}
+section .page4:hover ul li .cpus .mem {
+    transform: translateX(0);
+    opacity: 1;
+}
+section .page4:hover ul li .cpus .spin {
+    transform: translateX(0);
+    opacity: 1;
+}
