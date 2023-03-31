@@ -125,6 +125,7 @@ header ul li div:nth-child(2) .inner-product ul li:nth-child(2) {
     display: flex;
     flex-direction: column;
     padding-left: 2%;
+    padding-bottom: 130%;
 }
 
 header ul li div:nth-child(2) .inner-product ul li:nth-child(2) div {
@@ -152,6 +153,11 @@ header ul li div:nth-child(2) .inner-product ul li:nth-child(2) div {
 
 .sub-header ul li a:hover {
     color: rgb(53, 113, 241);
+    border-bottom: 2px solid rgb(53, 113, 241);
+}
+
+.sub-header ul li a:nth-child(5):hover {
+    border-bottom: 2px solid rgb(53, 113, 241);
 }
 
 .sub-header ul span {
@@ -159,7 +165,7 @@ header ul li div:nth-child(2) .inner-product ul li:nth-child(2) div {
 }
 
 .sub-header ul li a:nth-child(5) {
-    text-decoration: underline;
+    border-bottom: 2px solid white;
 }
 
 section {
@@ -214,6 +220,20 @@ section .page2 {
     margin-bottom: 5%;
 }
 
+section .page2 ul::after {
+    position: absolute;
+    content: url(../img/hero-bg-square-jey.svg);
+    left: -10%;
+    bottom: -70%;
+    z-index: -1;
+}
+
+section .page2::before {
+    position: absolute;
+    content: url(../img/hero-bg-circle-jey.svg);
+    right: -5%;
+}
+
 section .page2 ul li img {
     width: 80%;
     margin-left: 10%;
@@ -251,10 +271,28 @@ section .page3 {
     padding-bottom: 5%;
 }
 
+section .page3 ul::before {
+    position: absolute;
+    content: '' ;
+    width: 40%;
+    height: 70%;
+    right: -8%;
+    bottom: -125%;
+    background: url(../img/glow-new-jey.png) no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
 section .page3 ul {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section .page2 ul::before {
+    position: absolute;
+    content: url(../img/glow-new-jey.png);
+   
 }
 
 section .page3 ul li:nth-child(1) {
@@ -426,6 +464,17 @@ section .page6 {
     margin-bottom: 5%;
 }
 
+section .page6 ul::before {
+    position: absolute;
+    content: '' ;
+    width: 50%;
+    height: 70%;
+    left: 10%;
+    background: url(../img/glow-new-jey.png) no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
 section .page6 ul {
     display: flex;
     justify-content: center;
@@ -434,7 +483,6 @@ section .page6 ul {
 
 section .page6 ul li {
     width: 46%;
-
 }
 
 section .page6 ul li:nth-child(2) {
@@ -594,4 +642,51 @@ footer ul li.footer-logo a img {
     opacity: 0.348;
     width: 25px;
     padding: 8% 0;
+}
+
+@media screen and (max-width: 1320px) {
+    section .page3 ul{
+        display: block;
+    }
+
+    section .page3 ul li:nth-child(1) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    section .page4 ul li div.fas {
+        font-size: 30px;
+    }
+    
+    section .page4 ul li div.ghs {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .sub-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    section .page5 ul li.per {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    section .page1 ul li a:nth-child(1) {
+        color: rgb(10, 0, 38);
+        background: white;
+        display: block;
+        justify-content: center;
+        margin-bottom: 8%;
+    }
+
+    section .page1 ul li a:nth-child(2) {
+        display: block;
+    }
 }
