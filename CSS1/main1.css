@@ -17,7 +17,7 @@ input {
     height: 40px;
     border: 2px solid rgb(181, 181, 181);
     border-radius: 5px;
-
+    color: white;
 }
 
 html {
@@ -101,7 +101,7 @@ header ul li div:nth-child(2) .inner-product ul li:nth-child(1) {
 }
 header ul li div:nth-child(2):hover .inner-product ul {
     
-    display: flex;
+    display: none;
 }
 
 header ul li div:nth-child(2) .inner-product ul li:nth-child(1) div {
